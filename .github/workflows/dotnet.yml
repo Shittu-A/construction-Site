@@ -1,0 +1,22 @@
+
+name: Deploy
+
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  deploy:
+    name : Deploy Website
+    runs-on: [self-hosted,windows]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Stop application pool
+      run:  C:\\Windows\\System32\\inetsrv\\appcmd stop apppool /apppool.name:'worldconstructionsplatform.com'  
+      continue-on-error: true
+    - name: Copy new files
+      run:  xcopy 'F:\\action-runners\\worldconstructionsplatform.com\\_work\\worldconstructionsplatform\\worldconstructionsplatform\\src' 'F:\\Applications\\worldconstructionsplatform' /s /e /y
+    - name: Start application pool	  
+      run:  C:\\Windows\\System32\\inetsrv\\appcmd start apppool /apppool.name:'worldconstructionsplatform.com'     

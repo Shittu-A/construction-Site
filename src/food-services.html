@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food and Agriculture Services | The World Food Platform</title>
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="asset/fonts/remixicon.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --page-green: #2c9d47;
+            --page-black: #0b0b0b;
+            --page-gray: #f2f2f2;
+            --text-dark: #171717;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #ffffff;
+            color: var(--text-dark);
+        }
+
+        .stats-strip {
+            background-color: #ffffff;
+            color: #000;
+            padding: 11px 0 14px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 16px;
+            align-items: center;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-item::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            right: -8px;
+            width: 1px;
+            height: 36px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-item:last-child::after {
+            display: none;
+        }
+
+        .stat-icon {
+            width: 28px;
+            height: 28px;
+            margin: 0 auto 6px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 12px;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+            margin: 0 0 3px;
+            color: #008800;
+            font-family: bruumBoldFont, Arial, sans-serif;
+        }
+
+        .stat-label {
+            margin: 0;
+            font-size: 10px;
+            color: #666;
+            text-transform: lowercase;
+            letter-spacing: 0.1px;
+            font-family: bruumLightFont, Arial, sans-serif;
+        }
+
+        .services-grid-section {
+            background: #e3e3e3;
+            padding: 30px 0 24px;
+        }
+
+        .services-grid-section .container-fluid {
+            max-width: 1240px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        .main-banner .hero-text-overlay {
+            left: 6% !important;
+        }
+
+        .hero-title-mobile {
+            display: none;
+        }
+
+        .service-card {
+            margin-bottom: 0;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #d4d4d4;
+            box-shadow: none;
+            background: #ececec;
+            width: 100%;
+            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 190px !important;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+            border-color: #c9c9c9;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .service-card-body {
+            background-color: #ffffff !important;
+            padding: 9px 15px 18px 36px;
+            min-height: 150px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .service-card-body h3 {
+            margin: 0 0 16px;
+            font-size: 18px;
+            color: #111;
+            font-family: bruumBoldFont, Arial, sans-serif;
+            line-height: 1.1;
+        }
+
+        .service-card-body ul {
+            margin: 0;
+            padding: 0 0 0 10px;
+            list-style: none;
+            border-left: 4px solid #04a24f;
+        }
+
+        .service-card-body li {
+            font-size: 13px;
+            line-height: 1.34;
+            color: #202020;
+            padding-left: 12px;
+            position: relative;
+            font-family: bruumLightFont, Arial, sans-serif;
+            font-weight: 600;
+        }
+
+        .service-card-body li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #101010;
+            font-weight: 700;
+        }
+
+        @media (max-width: 1199px) {
+            .stats-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                row-gap: 14px;
+            }
+
+            .stat-item:nth-child(3)::after,
+            .stat-item:nth-child(6)::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .stat-item::after {
+                display: none;
+            }
+
+            .service-card-body {
+                min-height: unset;
+            }
+
+            .main-banner .hero-text-overlay {
+                left: 0 !important;
+            }
+
+            .hero-title-desktop {
+                display: none;
+            }
+
+            .hero-title-mobile {
+                display: inline;
+                white-space: nowrap;
+            }
+
+            .main-banner .hero-title {
+                font-size: 1.9rem;
+                line-height: 1.22;
+            }
+
+            .service-card img {
+                height: auto;
+            }
+
+            .service-card-body h3 {
+                font-size: 16px;
+            }
+
+            .service-card-body li {
+                font-size: 11px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="home-screen">
+        <header>
+            <!-- Top nav with buttons -->
+            <div class="nav1 mb-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="left-nav">
+                                <span style="font-size: 16px;margin-right: 15px;">The World Food Platform</span>
+                            </div>
+                        </div>
+                        <div class="col-md-9 text-md-end">
+                            <div class="d-flex flex-wrap justify-content-md-end gap-1" role="group"
+                                aria-label="Navigation buttons">
+                                <a href="news-agency.html" class="btn btnSupply rounded">Food News Agency</a>
+                                <a href="./calendar.html" class="btn btnSupply rounded d-none d-md-inline">The Events
+                                    Calendar</a>
+                                <a href="calendar.html" class="btn btnSupply rounded d-md-none">Calendar</a>
+                                <a href="./brands-directory.html" class="btn btnSupply rounded">Food Brands
+                                    Directory</a>
+                                <a href="./supplier-directory.html" class="btn btnSupply rounded">Suppliers
+                                    Directory</a>
+                                <a href="https://app.worldfoodplatform.com/membership" class="btn btnSupply rounded">Membership</a>
+                                <a href="https://app.worldfoodplatform.com/Auth/Login" class="btn login rounded">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-light py-2">
+                <div class="container-fluid">
+                    <div class="text-center">
+                        <a href="index.html" class="text-decoration-none text-dark">Home</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="asia/index.html" class="text-decoration-none text-dark">Asia</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="africa/index.html" class="text-decoration-none text-dark">Africa</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="north-america/index.html" class="text-decoration-none text-dark">North America</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="sourth-america/index.html" class="text-decoration-none text-dark">South America</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="antarctica/index.html" class="text-decoration-none text-dark">Antarctica</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="europ/index.html" class="text-decoration-none text-dark">Europe</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="australia/index.html" class="text-decoration-none text-dark">Aus-NZ</a>
+                        <span class="text-muted mx-1">|</span>
+                        <a href="russia/index.html" class="text-decoration-none text-dark">Russia</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logo Section with title and imagery - BELOW the menus -->
+            <div class="container-fluid" style="background-color: #f8f9fa;">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <img src="img/header.png" alt="World Food Platform Platform Logo" class="img-fluid" style="max-height: 290px;">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-banner position-relative">
+                <div class="container mt-4 mb-4">
+                    <div class="hero-video-container position-relative">
+                        <img src="asset/fonts/Food/Asset 144.png" class="hero-video w-100 img-fluid" alt="The only thing we are serious about is food">
+                        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+                        <div class="hero-text-overlay position-absolute top-50 start-0 translate-middle-y text-white ps-5">
+                            <h1 class="hero-title fw-bold ">
+                               <span class="hero-title-desktop">The Only Thing We Are<br>Serious About is Food</span>
+                               <span class="hero-title-mobile">The Only Thing We<br>Are Serious About<br>is Food</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="counter-top" aria-label="Platform statistics">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 col-12">
+                            <div id="timetext">
+                                <p class="timetext">
+                                    <strong>A Global Platform Advancing Sustainable Food Systems Across Borders</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12 text-md-end">
+                            <div class="btns">
+                                <div class="row">
+                                    <div class="col-md-5 col-12"></div>
+                                    <div class="col-md-7 col-12">
+                                        <button class="btn" style="background-color: #000000; border-color: #000000;">
+                                            <a href="services.html">
+                                                <strong>Online Food and Grocery Delivery </strong>
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-12"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="counter" aria-label="Achievement statistics">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-6">
+                            <div class="counter-desc text-center">
+                                <img src="https://datamatixgroup.com/2018Home/img/BusinessYears.png" alt="Years in Business Icon" class="img-fluid">
+                                <h2 class="text-black">37+</h2>
+                                <p>Years in Business</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="counter-desc text-center">
+                                <img src="https://datamatixgroup.com/2018Home/img/SuccessfulEvents.png" alt="Successful Events Icon" class="img-fluid">
+                                <h2 class="text-black">2500+</h2>
+                                <p>Successful Events</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="counter-desc text-center">
+                                <img src="https://datamatixgroup.com/2018Home/img/SatisfiedClients.png" alt="Satisfied Clients Icon" class="img-fluid">
+                                <h2 class="text-black">5000+</h2>
+                                <p>Satisfied Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="counter-desc text-center">
+                                <img src="https://datamatixgroup.com/2018Home/img/MediaPartners.png" alt="Media Partners Icon" class="img-fluid">
+                                <h2 class="text-black">500+</h2>
+                                <p>Media Partners</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="counter-desc text-center">
+                                <img src="https://datamatixgroup.com/2018Home/img/PlatinumPartners.png" alt="Platinum Partners Icon" class="img-fluid">
+                                <h2 class="text-black">500+</h2>
+                                <p>Platinum Partners</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="counter-desc text-center">
+                                <img src="https://datamatixgroup.com/2018Home/img/SatisfiedPartners.png" alt="Other Supporters Icon" class="img-fluid">
+                                <h2 class="text-black">300+</h2>
+                                <p>Other Supporters</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services-grid-section">
+                <div class="container-fluid">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 146.png" alt="Platform services">
+                                <div class="service-card-body">
+                                    <h3>The Platform</h3>
+                                    <ul>
+                                        <li>Profile</li>
+                                        <li>About the Platform</li>
+                                        <li>Global Food Vision</li>
+                                        <li>Governance &amp; Ethics</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 145.png" alt="Our services">
+                                <div class="service-card-body">
+                                    <h3>Our Services</h3>
+                                    <ul>
+                                        <li>Market Access Services</li>
+                                        <li>Buyer Supplier Matchmaking</li>
+                                        <li>Procurement Support</li>
+                                        <li>Brand Development</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 144.png" alt="Events">
+                                <div class="service-card-body">
+                                    <h3>Events</h3>
+                                    <ul>
+                                        <li>Food Conferences</li>
+                                        <li>Global Food Exhibitions</li>
+                                        <li>Executive Leadership Programs</li>
+                                        <li>International Food Delegations</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 143.png" alt="Authorities">
+                                <div class="service-card-body">
+                                    <h3>Authorities</h3>
+                                    <ul>
+                                        <li>Agriculture Authorities</li>
+                                        <li>Food and Standards Bodies</li>
+                                        <li>Regulatory Institutions</li>
+                                        <li>International Food Agencies</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 142.png" alt="Standardizations">
+                                <div class="service-card-body">
+                                    <h3>Standardizations</h3>
+                                    <ul>
+                                        <li>Food Certifications &amp; Standards</li>
+                                        <li>Quality and Safety Frameworks</li>
+                                        <li>Sustainability &amp; ESG Standards</li>
+                                        <li>Compliance Systems</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 141.png" alt="Ag-tech and innovation">
+                                <div class="service-card-body">
+                                    <h3>AGI-TECH &amp; INNOVATION</h3>
+                                    <ul>
+                                        <li>Agri-Machinery Providers</li>
+                                        <li>Smart Agri-Tech Solutions</li>
+                                        <li>Food Processing Technologies</li>
+                                        <li>Advisory and Capacity Building</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 140.png" alt="Storage and handling">
+                                <div class="service-card-body">
+                                    <h3>STORAGE &amp; HANDLING</h3>
+                                    <ul>
+                                        <li>Cold Chain &amp; Food Storage</li>
+                                        <li>Dry and Bulk Food Storage</li>
+                                        <li>Hygiene and Safety Storage</li>
+                                        <li>Packing and Labeling</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 139.png" alt="Logistics and trade">
+                                <div class="service-card-body">
+                                    <h3>LOGISTICS &amp; TRADE</h3>
+                                    <ul>
+                                        <li>Food Logistics Services</li>
+                                        <li>Shipping and Forwarding</li>
+                                        <li>Customs and Clearance</li>
+                                        <li>Global Trade Facilitation</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 138.png" alt="Partnership">
+                                <div class="service-card-body">
+                                    <h3>Partnership</h3>
+                                    <ul>
+                                        <li>Food Producers &amp; Manufacturers</li>
+                                        <li>Agribusiness Institutions</li>
+                                        <li>Knowledge Partners</li>
+                                        <li>Media &amp; Strategic Partners</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 137.png" alt="Membership">
+                                <div class="service-card-body">
+                                    <h3>Membership</h3>
+                                    <ul>
+                                        <li>Food Industry Professionals</li>
+                                        <li>Agribusiness Leaders</li>
+                                        <li>Chefs and Culinary Experts</li>
+                                        <li>Innovators and Startups</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 136.png" alt="Media">
+                                <div class="service-card-body">
+                                    <h3>Media</h3>
+                                    <ul>
+                                        <li>Global Food News</li>
+                                        <li>Market Intelligence Report</li>
+                                        <li>Food Innovation Stories</li>
+                                        <li>Leadership Interviews</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <article class="service-card">
+                                <img src="asset/fonts/Food/Asset 135.png" alt="Contact">
+                                <div class="service-card-body">
+                                    <h3>Contact</h3>
+                                    <ul>
+                                        <li>Managing Director</li>
+                                        <li>Partnerships and Alliances</li>
+                                        <li>Media and Communications</li>
+                                        <li>Advertising and Sponsorships</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <footer class="wf-footer">
+		<div class="container-fluid wf-footer-main">
+			<div class="row g-4">
+				<div class="col-xl-9 col-lg-8">
+					<div class="row g-4">
+						<div class="col-md-4">
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">The Platform</h4>
+								<ul class="wf-footer-links">
+									<li><a href="welcome.html">Welcome</a></li>
+									<li><a href="org-profile.html">Profile</a></li>
+									<li><a href="coming-soon.html">Mission</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+								</ul>
+							</div>
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">Executives Programs</h4>
+								<ul class="wf-footer-links">
+									<li><a href="coming-soon.html">Executives Programs</a></li>
+									<li><a href="coming-soon.html">Round Table Meetings</a></li>
+									<li><a href="coming-soon.html">Knowledge Exchange</a></li>
+									<li><a href="calendar.html">Events Calendar</a></li>
+								</ul>
+							</div>
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">Recruitments</h4>
+								<ul class="wf-footer-links">
+									<li><a href="coming-soon.html">Recruitments</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 wf-col-sep">
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">Authorities</h4>
+								<ul class="wf-footer-links">
+									<li><a href="coming-soon.html">Agriculture</a></li>
+									<li><a href="coming-soon.html">Standards &amp; Regulatory</a></li>
+									<li><a href="coming-soon.html">Official Institutions</a></li>
+									<li><a href="coming-soon.html">National Institutions</a></li>
+								</ul>
+							</div>
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">World Delegations</h4>
+								<ul class="wf-footer-links">
+									<li><a href="coming-soon.html">Government Delegations</a></li>
+									<li><a href="coming-soon.html">Business Delegations</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+								</ul>
+							</div>
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">Internship</h4>
+								<ul class="wf-footer-links">
+									<li><a href="coming-soon.html">Internship</a></li>
+									<li><a href="coming-soon.html">Mentoring</a></li>
+									<li><a href="coming-soon.html">Volunteer</a></li>
+									<li><a href="coming-soon.html">Remote Working</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 wf-col-sep">
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">Global Events</h4>
+								<ul class="wf-footer-links">
+									<li><a href="coming-soon.html">Conferences</a></li>
+									<li><a href="coming-soon.html">Exhibitions</a></li>
+									<li><a href="calendar.html">Events Calendar</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+								</ul>
+							</div>
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">Speakers</h4>
+								<ul class="wf-footer-links">
+									<li><a href="coming-soon.html">Celebrities</a></li>
+									<li><a href="coming-soon.html">Keynotes Speakers</a></li>
+									<li><a href="coming-soon.html">MC's and Presenters</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+								</ul>
+							</div>
+							<div class="wf-footer-section">
+								<h4 class="wf-footer-title">Buyers And Supplier</h4>
+								<ul class="wf-footer-links">
+									<li><a href="services.html">The Markets Access</a></li>
+									<li><a href="supplier-directory.html">Buyers and Supplier</a></li>
+									<li><a href="news-agency.html">Food Agencies</a></li>
+									<li><a href="coming-soon.html">TBA</a></li>
+									<li class="wf-more-link"><a href="food-services.html">More</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4">
+					<div class="wf-brand">
+						<p class="wf-tagline">The Only Thing We<br>Are Serious About is Food</p>
+						<img src="img/WFAP-logo.png" alt="World Food Platform Logo" class="wf-brand-logo">
+						<div class="wf-brand-title">THE WORLD<br>FOOD<br>PLATFORM</div>
+						<hr>
+						<div class="wf-datamatix-wrap">
+							<img src="images/datamatix-logo-old.png" alt="Datamatix" class="wf-datamatix-logo">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row wf-subscribe-row">
+				<div class="col-xl-9 col-lg-8">
+					<div class="wf-subscribe">
+						<p class="wf-subscribe-label">Subscribe to our special offers</p>
+						<form class="wf-subscribe-form" action="#" method="post">
+							<div class="wf-input-wrap">
+								<div class="wf-input-icon" aria-hidden="true"><i class="far fa-envelope-open"></i></div>
+								<input class="wf-subscribe-input" type="email" aria-label="Subscribe Email">
+							</div>
+							<button class="wf-subscribe-btn" type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4">
+					<div class="wf-connect wf-connect-right">
+						<span class="wf-connect-label">CONNECT WITH US</span>
+						<a href="https://web.facebook.com/DATAMATIX" class="wf-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://x.com/Datamatix" class="wf-social" aria-label="X"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.instagram.com/datamatixgroup/" class="wf-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.linkedin.com/company/datamatix/" class="wf-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://www.youtube.com/@DatamatixGroupDubai" class="wf-social" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wf-footer-bottom">
+			<p>2025-2030 &copy; Datamatix Group - Copyright All Rights Reserved</p>
+		</div>
+	</footer>
+	</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
