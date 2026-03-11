@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+  <title id="title">Construction hero image</title>
+  <desc id="desc">Wide construction site illustration with city towers, cranes, scaffolding, and a gold bottom border.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6f8faa"/>
+      <stop offset="60%" stop-color="#aab8c5"/>
+      <stop offset="100%" stop-color="#e5dfd7"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7f90a4"/>
+      <stop offset="100%" stop-color="#d4d8de"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7b776f"/>
+      <stop offset="100%" stop-color="#47433e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="820" fill="#efefef"/>
+  <rect x="24" y="24" width="1552" height="744" fill="url(#sky)"/>
+
+  <g opacity="0.95">
+    <rect x="34" y="530" width="1540" height="238" fill="#b6b0a8"/>
+    <rect x="34" y="24" width="1552" height="744" fill="none" stroke="#d5d5d5" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.85">
+    <rect x="52" y="328" width="76" height="390" fill="#9096a1"/>
+    <rect x="142" y="262" width="66" height="456" fill="#7e848e"/>
+    <rect x="224" y="206" width="92" height="512" fill="url(#glass)"/>
+    <rect x="344" y="242" width="54" height="476" fill="#c3c8cf"/>
+    <rect x="414" y="298" width="72" height="420" fill="#a9b0b7"/>
+    <rect x="582" y="260" width="58" height="458" fill="#b7bcc3"/>
+    <rect x="666" y="286" width="58" height="432" fill="#c5cad0"/>
+    <rect x="736" y="246" width="88" height="472" fill="url(#glass)"/>
+    <rect x="852" y="316" width="42" height="402" fill="#b8bdc3"/>
+    <rect x="914" y="286" width="52" height="432" fill="#c7ccd1"/>
+  </g>
+
+  <g opacity="0.92">
+    <rect x="1030" y="24" width="100" height="552" fill="url(#glass)"/>
+    <rect x="1134" y="24" width="94" height="562" fill="url(#glass)"/>
+    <rect x="1236" y="72" width="158" height="494" fill="#d3d6db"/>
+    <rect x="1398" y="54" width="122" height="514" fill="#d8dadd"/>
+    <g stroke="#6a7480" stroke-width="2" opacity="0.55">
+      <path d="M1052 24 V576"/>
+      <path d="M1074 24 V576"/>
+      <path d="M1096 24 V576"/>
+      <path d="M1156 24 V586"/>
+      <path d="M1180 24 V586"/>
+      <path d="M1204 24 V586"/>
+      <path d="M1260 72 V566"/>
+      <path d="M1290 72 V566"/>
+      <path d="M1320 72 V566"/>
+      <path d="M1350 72 V566"/>
+      <path d="M1422 54 V568"/>
+      <path d="M1450 54 V568"/>
+      <path d="M1478 54 V568"/>
+    </g>
+  </g>
+
+  <g fill="#575b63" opacity="0.9">
+    <path d="M180 120 h18 l-36 530 h-18z"/>
+    <path d="M296 130 h18 l-42 520 h-18z"/>
+    <path d="M350 250 h18 l-30 400 h-18z"/>
+    <path d="M516 140 h24 l-26 230 h-22z"/>
+    <path d="M760 214 h22 l-10 436 h-24z"/>
+  </g>
+
+  <g stroke="#9a7b3a" stroke-width="4" fill="none" opacity="0.95">
+    <path d="M506 152 L716 152"/>
+    <path d="M516 152 L516 636"/>
+    <path d="M600 152 L446 348"/>
+    <path d="M716 152 L626 196"/>
+    <path d="M1260 122 L1476 122"/>
+    <path d="M1400 122 L1400 648"/>
+    <path d="M1328 122 L1254 166"/>
+    <path d="M1476 122 L1508 196"/>
+  </g>
+
+  <g stroke="#353535" stroke-width="3" fill="none" opacity="0.9">
+    <rect x="840" y="318" width="522" height="204"/>
+    <path d="M840 362 H1362 M840 406 H1362 M840 450 H1362 M840 494 H1362"/>
+    <path d="M880 318 V522 M926 318 V522 M972 318 V522 M1018 318 V522 M1064 318 V522 M1110 318 V522 M1156 318 V522 M1202 318 V522 M1248 318 V522 M1294 318 V522"/>
+    <path d="M820 522 L1130 522"/>
+    <path d="M860 560 L1200 560"/>
+  </g>
+
+  <g opacity="0.95">
+    <rect x="92" y="560" width="402" height="28" fill="url(#steel)"/>
+    <rect x="146" y="600" width="508" height="26" fill="url(#steel)"/>
+    <rect x="260" y="640" width="428" height="24" fill="url(#steel)"/>
+    <rect x="622" y="586" width="184" height="24" fill="url(#steel)"/>
+    <rect x="596" y="614" width="212" height="22" fill="url(#steel)"/>
+    <rect x="566" y="642" width="240" height="22" fill="url(#steel)"/>
+    <rect x="504" y="668" width="238" height="22" fill="url(#steel)"/>
+    <rect x="852" y="548" width="312" height="20" fill="#7e7263"/>
+    <rect x="934" y="574" width="344" height="20" fill="#70665a"/>
+    <rect x="1010" y="602" width="380" height="20" fill="#6b6157"/>
+    <rect x="1100" y="632" width="312" height="18" fill="#5b544d"/>
+    <rect x="1178" y="658" width="258" height="18" fill="#595149"/>
+  </g>
+
+  <g stroke="#4d4842" stroke-width="3" opacity="0.8">
+    <path d="M44 718 H1558"/>
+    <path d="M74 678 L154 678"/>
+    <path d="M210 690 L314 690"/>
+    <path d="M1300 690 L1454 690"/>
+    <path d="M148 524 V718"/>
+    <path d="M210 512 V718"/>
+    <path d="M258 478 V718"/>
+    <path d="M318 498 V718"/>
+    <path d="M862 360 V718"/>
+    <path d="M912 360 V718"/>
+    <path d="M962 360 V718"/>
+    <path d="M1012 360 V718"/>
+    <path d="M1062 360 V718"/>
+    <path d="M1112 360 V718"/>
+    <path d="M1162 360 V718"/>
+    <path d="M1212 360 V718"/>
+    <path d="M1262 360 V718"/>
+    <path d="M1312 360 V718"/>
+    <path d="M1362 360 V718"/>
+  </g>
+
+  <g opacity="0.95">
+    <g transform="translate(1020 548)">
+      <circle cx="0" cy="0" r="10" fill="#d3cf49"/>
+      <rect x="-6" y="10" width="12" height="36" fill="#51708a"/>
+      <path d="M-20 22 L0 12 L20 22 L16 28 L0 20 L-16 28 Z" fill="#68a66b"/>
+      <path d="M-10 46 L-18 76 M10 46 L18 76" stroke="#3a3a3a" stroke-width="4"/>
+    </g>
+    <g transform="translate(1366 694) scale(0.8)">
+      <circle cx="0" cy="0" r="10" fill="#d3cf49"/>
+      <rect x="-6" y="10" width="12" height="36" fill="#51708a"/>
+      <path d="M-20 22 L0 12 L20 22 L16 28 L0 20 L-16 28 Z" fill="#68a66b"/>
+      <path d="M-10 46 L-18 76 M10 46 L18 76" stroke="#3a3a3a" stroke-width="4"/>
+    </g>
+    <g transform="translate(1442 684) scale(0.72)">
+      <circle cx="0" cy="0" r="10" fill="#d3cf49"/>
+      <rect x="-6" y="10" width="12" height="36" fill="#51708a"/>
+      <path d="M-20 22 L0 12 L20 22 L16 28 L0 20 L-16 28 Z" fill="#68a66b"/>
+      <path d="M-10 46 L-18 76 M10 46 L18 76" stroke="#3a3a3a" stroke-width="4"/>
+    </g>
+  </g>
+
+  <rect x="24" y="768" width="1552" height="18" fill="#9c8330"/>
+</svg>
