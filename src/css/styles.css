@@ -1656,18 +1656,26 @@ ul.arrow-list li::marker {
 }
 
 .wf-brand {
-    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    width: 100%;
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .wf-tagline {
     font-family: bruumLightFont, Arial, sans-serif;
-    font-size: 33px;
+    font-size: clamp(22px, 2.1vw, 33px);
     line-height: 1.14;
     text-align: center;
     color: #fff;
     margin-bottom: 16px;
-    white-space: nowrap;
-    overflow-wrap: normal;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .wf-footer .wf-tagline {
@@ -1683,19 +1691,19 @@ ul.arrow-list li::marker {
 
 .wf-brand-title {
     font-family: bruumLightFont, Arial, sans-serif;
-    font-size: 62px;
+    font-size: clamp(28px, 2.65vw, 38px);
     font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: 0.8px;
+    line-height: 1.04;
+    letter-spacing: 0.3px;
+    display: inline-block;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 16px;
-    white-space: nowrap;
-}
-
-.wf-brand hr {
-    display: none;
+    white-space: normal;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wf-datamatix-wrap {
@@ -1783,12 +1791,8 @@ ul.arrow-list li::marker {
         font-size: 16px;
     }
 
-    .wf-tagline {
-        font-size: 19px;
-    }
-
-    .wf-brand-title {
-        font-size: 46px;
+    .wf-brand {
+        max-width: 380px;
     }
 }
 
@@ -1804,11 +1808,12 @@ ul.arrow-list li::marker {
     .wf-brand {
         padding-left: 0;
         margin-top: 10px;
+        max-width: none;
     }
 
     .wf-brand-title {
-        font-size: 36px;
-        line-height: 1.08;
+        font-size: 32px;
+        line-height: 1.04;
     }
 
     .wf-datamatix-logo {
