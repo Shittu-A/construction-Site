@@ -140,7 +140,6 @@ body {
 .video-box{
     border: 1px solid var(--secondary-color);
     padding: 15px;
-    height: 500px;
 }
 .mission {
     background-color: #eee;
