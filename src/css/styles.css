@@ -1477,11 +1477,12 @@ ul.arrow-list li::marker {
     background: #000;
     color: #fff;
     margin-top: 0;
-    border-top: 24px solid #05823a;
+    border-top: 20px solid #05823a;
 }
 
 .wf-footer-main {
-    padding: 36px 44px 24px;
+    width: 100%;
+    padding: 54px 70px 24px;
 }
 
 .wf-footer p {
@@ -1490,14 +1491,14 @@ ul.arrow-list li::marker {
 }
 
 .wf-footer-section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .wf-footer-title {
     font-family: bruumBoldFont, Arial, sans-serif;
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
     line-height: 1.1;
     color: #fff;
 }
@@ -1505,11 +1506,11 @@ ul.arrow-list li::marker {
 .wf-footer-title::after {
     content: "";
     display: block;
-    width: 66px;
+    width: 68px;
     height: 6px;
     background: #05823a;
-    margin-top: 9px;
-    margin-bottom: 12px;
+    margin-top: 10px;
+    margin-bottom: 18px;
 }
 
 .wf-footer-links {
@@ -1521,9 +1522,9 @@ ul.arrow-list li::marker {
 .wf-footer-links li {
     position: relative;
     padding-left: 14px;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     font-size: 14px;
-    line-height: 1.36;
+    line-height: 1.32;
     color: #e7e7e7;
     font-family: bruumLightFont, Arial, sans-serif;
 }
@@ -1572,7 +1573,7 @@ ul.arrow-list li::marker {
 .wf-col-sep {
     position: relative;
     border-left: 0;
-    padding-left: 28px;
+    padding-left: 40px;
 }
 
 .wf-col-sep::before {
@@ -1580,7 +1581,7 @@ ul.arrow-list li::marker {
     position: absolute;
     left: 0;
     top: 0;
-    bottom: 32px;
+    bottom: 34px;
     width: 2px;
     background: rgba(255, 255, 255, 0.78);
 }
@@ -1590,7 +1591,7 @@ ul.arrow-list li::marker {
 }
 
 .wf-subscribe-row {
-    margin-top: 8px;
+    margin-top: 14px;
     align-items: flex-end;
 }
 
@@ -1599,13 +1600,13 @@ ul.arrow-list li::marker {
     font-size: 17px;
     color: #fff;
     display: block;
-    margin-bottom: 22px !important;
+    margin-bottom: 18px !important;
 }
 
 .wf-subscribe-form {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
     width: 100%;
     margin-top: 0;
     justify-content: flex-start;
@@ -1620,8 +1621,8 @@ ul.arrow-list li::marker {
 }
 
 .wf-input-icon {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border: 1px solid #bfc3c7;
     background: #fff;
     color: #000;
@@ -1633,9 +1634,9 @@ ul.arrow-list li::marker {
 
 .wf-subscribe-input {
     flex: 1;
-    height: 48px;
+    height: 52px;
     border: 1px solid #bfc3c7;
-    background: #cfd3d7;
+    background: #c8ced4;
     padding: 0 14px;
     font-size: 14px;
     font-family: bruumLightFont, Arial, sans-serif;
@@ -1643,8 +1644,9 @@ ul.arrow-list li::marker {
 }
 
 .wf-subscribe-btn {
-    height: 48px;
-    padding: 0 20px;
+    height: 52px;
+    min-width: 112px;
+    padding: 0 24px;
     border: none;
     background: #05823a;
     color: #fff;
@@ -1654,16 +1656,18 @@ ul.arrow-list li::marker {
 }
 
 .wf-brand {
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 .wf-tagline {
     font-family: bruumLightFont, Arial, sans-serif;
-    font-size: 21px;
-    line-height: 1.08;
+    font-size: 33px;
+    line-height: 1.14;
     text-align: center;
     color: #fff;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
+    white-space: nowrap;
+    overflow-wrap: normal;
 }
 
 .wf-footer .wf-tagline {
@@ -1674,38 +1678,37 @@ ul.arrow-list li::marker {
     width: 250px;
     max-width: 100%;
     display: block;
-    margin: 0 auto 14px;
+    margin: 0 auto 16px;
 }
 
 .wf-brand-title {
     font-family: bruumLightFont, Arial, sans-serif;
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 1.18;
-    letter-spacing: 0.5px;
+    font-size: 62px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 0.8px;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
+    white-space: nowrap;
 }
 
 .wf-brand hr {
-    border: 0;
-    border-top: 2px solid #323232;
-    margin: 14px 0;
+    display: none;
 }
 
 .wf-datamatix-wrap {
     border-top: 2px solid #323232;
     border-bottom: 2px solid #323232;
-    padding: 14px 0;
-    margin: 14px 0;
+    padding: 16px 0;
+    margin: 18px 0;
 }
 
 .wf-datamatix-logo {
     display: block;
     margin: 0 auto;
-    width: 290px;
+    width: 320px;
     max-width: 100%;
 }
 
@@ -1720,24 +1723,24 @@ ul.arrow-list li::marker {
 
 .wf-connect-right {
     margin-top: 0;
-    height: 48px;
+    height: 54px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 10px;
+    justify-content: flex-end;
+    padding-left: 0;
 }
 
 .wf-connect-label {
     font-family: bruumBoldFont, Arial, sans-serif;
     font-size: 13px;
-    margin-right: 6px;
+    margin-right: 8px;
     color: #fff;
     white-space: nowrap;
 }
 
 .wf-social {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background: #fff;
     color: #000;
@@ -1745,27 +1748,27 @@ ul.arrow-list li::marker {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .wf-footer-bottom {
     background: #05823a;
-    padding: 18px 0;
+    padding: 20px 0;
 }
 
 .wf-footer-bottom p {
     margin: 0;
     color: #fff;
     font-family: bruumLightFont, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 17px;
     text-align: left;
-    padding-left: 28px;
+    padding-left: 72px;
 }
 
 @media (max-width: 1399px) {
     .wf-footer-main {
-        padding: 30px 24px 20px;
+        padding: 36px 28px 22px;
     }
 
     .wf-footer-title {
@@ -1785,7 +1788,7 @@ ul.arrow-list li::marker {
     }
 
     .wf-brand-title {
-        font-size: 28px;
+        font-size: 46px;
     }
 }
 
@@ -1801,6 +1804,15 @@ ul.arrow-list li::marker {
     .wf-brand {
         padding-left: 0;
         margin-top: 10px;
+    }
+
+    .wf-brand-title {
+        font-size: 36px;
+        line-height: 1.08;
+    }
+
+    .wf-datamatix-logo {
+        width: 280px;
     }
 
     .wf-subscribe-form {
