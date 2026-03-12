@@ -1559,7 +1559,7 @@ ul.arrow-list li::marker {
     background: #000;
     color: #fff;
     margin-top: 0;
-    border-top: 20px solid #AF7C2C;
+    border-top: 20px solid #05823a;
 }
 
 .wf-footer-main {
@@ -1590,7 +1590,7 @@ ul.arrow-list li::marker {
     display: block;
     width: 68px;
     height: 6px;
-    background: #AF7C2C;
+    background: #05823a;
     margin-top: 10px;
     margin-bottom: 18px;
 }
@@ -1619,12 +1619,12 @@ ul.arrow-list li::marker {
 .wf-footer-links li a:hover {
     color: inherit;
     text-decoration: underline;
-    text-decoration-color: #AF7C2C;
+    text-decoration-color: #05823a;
     text-underline-offset: 2px;
 }
 
 .wf-footer-links li a:focus-visible {
-    outline: 2px solid #AF7C2C;
+    outline: 2px solid #05823a;
     outline-offset: 2px;
     border-radius: 2px;
 }
@@ -1730,7 +1730,7 @@ ul.arrow-list li::marker {
     min-width: 112px;
     padding: 0 24px;
     border: none;
-    background: #AF7C2C;
+    background: #05823a;
     color: #fff;
     font-size: 14px;
     font-family: bruumLightFont, Arial, sans-serif;
@@ -1842,7 +1842,7 @@ ul.arrow-list li::marker {
 }
 
 .wf-footer-bottom {
-    background: #AF7C2C;
+    background: #05823a;
     padding: 20px 0;
 }
 
