@@ -1443,7 +1443,7 @@ input,  select, textarea{
 .hero-image-container {
     position: relative;
     overflow: hidden;
-    background: #efefef;
+    background: transparent;
 }
 
 .hero-image {
