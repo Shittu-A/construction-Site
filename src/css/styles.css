@@ -5,8 +5,8 @@
 
 /* ================ 1. CSS VARIABLES ================ */
 :root {
-    --main-color: #008800;
-    --second-color: #008800;
+    --main-color: #AF7C2C;
+    --second-color: #AF7C2C;
     --text-dark: #333;
     --text-light: #6c757d;
     --bg-light: #f2f2f2;
@@ -99,7 +99,7 @@ ul {
 }
 
 .read-more-link {
-    color: #006600;
+    color: #AF7C2C;
     text-decoration: none;
 }
 
@@ -173,16 +173,16 @@ header .nav1 .btn-group .btn {
 }
 
 header .nav1 .btn.btnSupply {
-    background-color: #008800;
+    background-color: #AF7C2C;
     color: white;
-    border: 1px solid #008800;
+    border: 1px solid #AF7C2C;
     font-size: 1rem;
 }
 
 header .nav1 .btn.login {
-    background-color: #006600;
+    background-color: #AF7C2C;
     color: white;
-    border: 1px solid #006600;
+    border: 1px solid #AF7C2C;
     font-size: 1.1rem;
 }
 
@@ -325,6 +325,10 @@ header .right-part .nav3 a:hover {
     margin: 5px;
 }
 
+.counter-number {
+    color: #AF7C2C !important;
+}
+
 .counter-desc {
     text-align: center;
     padding: 1rem;
@@ -338,6 +342,15 @@ header .right-part .nav3 a:hover {
 .counter img {
     margin: 10px auto;
     height: 33px;
+}
+
+.counter .counter-desc img {
+    display: block;
+    width: auto !important;
+    max-width: 110px;
+    height: 48px !important;
+    object-fit: contain;
+    margin: 0 auto 10px;
 }
 
 .counter .counter-icon {
@@ -466,7 +479,7 @@ header .right-part .nav3 a:hover {
     left: 0;
     width: 150px;
     height: 8px;
-    background-color: var(--main-color);
+    background-color: #AF7C2C;
 }
 
 .latest-news h2::after {
@@ -476,8 +489,8 @@ header .right-part .nav3 a:hover {
     left: 0;
     right: -27vw;
     height: 0.5px;
-    background-color: #999;
-    box-shadow: 0 0 1px rgba(153, 153, 153, 0.5);
+    background-color: #AF7C2C;
+    box-shadow: 0 0 1px rgba(175, 124, 44, 0.5);
 }
 
 .latest-news img {
@@ -1042,6 +1055,12 @@ footer .copy-right p {
     height: 28px;
 }
 
+.counter .counter-desc img {
+    max-width: 100px;
+    height: 42px !important;
+    margin: 0 auto 8px;
+}
+
 .counter .counter-icon {
     height: 42px;
 }
@@ -1200,6 +1219,12 @@ input,  select, textarea{
     .counter img {
         margin: 5px auto 5px auto;
         height: 25px;
+    }
+
+    .counter .counter-desc img {
+        max-width: 88px;
+        height: 36px !important;
+        margin: 0 auto 6px;
     }
 
     .counter .counter-icon {
@@ -1389,7 +1414,7 @@ input,  select, textarea{
     top: 10%;
     transform: translateY(-50%);
     z-index: 1000;
-    background: #008800;
+    background: #AF7C2C;
     border-radius: 50px;
     padding: 3px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -1534,7 +1559,7 @@ ul.arrow-list li::marker {
     background: #000;
     color: #fff;
     margin-top: 0;
-    border-top: 20px solid #05823a;
+    border-top: 20px solid #AF7C2C;
 }
 
 .wf-footer-main {
@@ -1565,7 +1590,7 @@ ul.arrow-list li::marker {
     display: block;
     width: 68px;
     height: 6px;
-    background: #05823a;
+    background: #AF7C2C;
     margin-top: 10px;
     margin-bottom: 18px;
 }
@@ -1594,12 +1619,12 @@ ul.arrow-list li::marker {
 .wf-footer-links li a:hover {
     color: inherit;
     text-decoration: underline;
-    text-decoration-color: #05823a;
+    text-decoration-color: #AF7C2C;
     text-underline-offset: 2px;
 }
 
 .wf-footer-links li a:focus-visible {
-    outline: 2px solid #05823a;
+    outline: 2px solid #AF7C2C;
     outline-offset: 2px;
     border-radius: 2px;
 }
@@ -1705,7 +1730,7 @@ ul.arrow-list li::marker {
     min-width: 112px;
     padding: 0 24px;
     border: none;
-    background: #05823a;
+    background: #AF7C2C;
     color: #fff;
     font-size: 14px;
     font-family: bruumLightFont, Arial, sans-serif;
@@ -1817,7 +1842,7 @@ ul.arrow-list li::marker {
 }
 
 .wf-footer-bottom {
-    background: #05823a;
+    background: #AF7C2C;
     padding: 20px 0;
 }
 
