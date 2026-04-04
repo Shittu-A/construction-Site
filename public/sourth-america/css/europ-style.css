@@ -1,0 +1,97 @@
+:root {
+    --main-color: #39a178;
+    --second-color: #855914;
+    --text-dark: #333;
+    --text-light: #6c757d;
+    --bg-light: #f2f2f2;
+    --border-light: #e5e5e5;
+}
+.europ header .right-part .nav3{
+    background-color: var(--main-color);
+}
+.europ header .nav1 .btn.login {
+    background-color: #AF7C2C;
+    border: 1px solid #AF7C2C;
+}
+.europ .combined-section h2{
+    color: var(--main-color);
+}
+.counter h2{
+    color:var(--second-color) !important;
+}
+.welcome-content h2{
+    color: #000;
+}
+.latest-news h2::before {
+    background-color: var(--second-color) !important;
+}
+.read-more-link{
+color:#ae802b !important;
+}
+.types .type-text h2{
+     font-family: bruumBoldFont;
+     color: #000;
+     font-size: 40px;
+     border-bottom: 10px solid #ae802b;
+     padding-bottom: 20px;
+     margin-bottom: 20px;
+     width: 60%;
+     margin-left: auto;
+     margin-right: auto;
+}
+.types .type-text p{
+    text-align: center !important;
+    font-size: 25px;
+    line-height: 33px;
+}
+.types img{
+    width: 100%;
+}
+.slider-categ .slider-box{
+    background-color: #08823a;
+}
+.slider-categ .slider-box img{
+    width: 100%;
+}
+.slider-categ .slider-box .eg{
+    background-color: #ed2027;
+    padding:50px 30px;
+    height: 140px;
+    font-size: 24px;
+    color: #fff;
+     font-family: bruumBoldFont;
+}
+.slider-categ .slider-box .sa{
+    background-color: #006837;
+    padding: 30px;
+    color: #fff;
+     height: 140px;
+    font-size: 24px;
+     font-family: bruumBoldFont;
+}
+.slider-categ .slider-box .uae{
+    background-color: #000;
+     padding:50px 30px;
+    color: #fff;
+    height:140px;
+    font-size: 24px;
+     font-family: bruumBoldFont;
+}
+.slider-categ .slider-box .iran{
+    background-color: #e45823;
+     padding:50px 30px;
+    color: #fff;
+    height: 140px;
+    font-size: 24px;
+     font-family: bruumBoldFont;
+}
+.slider-categ .slider-box p{
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.slider-categ .slider-box p a{
+    text-decoration: underline;
+    color: #fff;
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 420" role="img" aria-labelledby="title desc">
+  <title id="title">The World Constructions Platform header</title>
+  <desc id="desc">Bilingual banner for The World Constructions Platform with English text, Arabic text, and a circular construction emblem.</desc>
+  <rect width="1800" height="420" fill="#ececec"/>
+
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="400" y="145" font-size="72" text-anchor="middle">The World</text>
+    <text x="400" y="220" font-size="72" text-anchor="middle">Constructions</text>
+    <text x="400" y="295" font-size="72" text-anchor="middle">Platform</text>
+  </g>
+
+  <g transform="translate(900 210)">
+    <circle r="150" fill="none" stroke="#1f7de1" stroke-width="10" stroke-dasharray="2 7"/>
+    <circle r="144" fill="none" stroke="#9c8330" stroke-width="18" stroke-dasharray="2 6" stroke-dashoffset="3"/>
+    <circle r="118" fill="#f6f6f6" stroke="#bfbfbf" stroke-width="4"/>
+
+    <path d="M-150 -14 H-100" stroke="#9c8330" stroke-width="10" stroke-linecap="round"/>
+    <path d="M-150 0 H-100" stroke="#9c8330" stroke-width="10" stroke-linecap="round"/>
+    <path d="M-150 14 H-100" stroke="#9c8330" stroke-width="10" stroke-linecap="round"/>
+    <path d="M100 -14 H150" stroke="#1f7de1" stroke-width="10" stroke-linecap="round"/>
+    <path d="M100 0 H150" stroke="#1f7de1" stroke-width="10" stroke-linecap="round"/>
+    <path d="M100 14 H150" stroke="#1f7de1" stroke-width="10" stroke-linecap="round"/>
+
+    <g fill="none" stroke-linecap="round" stroke-width="8">
+      <path d="M-54 62 V-34" stroke="#6e6e6e"/>
+      <path d="M-54 62 L-68 78" stroke="#6e6e6e"/>
+      <path d="M-24 76 V-60" stroke="#1f7de1"/>
+      <path d="M24 94 V-76" stroke="#9c8330"/>
+      <path d="M54 64 V-34" stroke="#1f7de1"/>
+      <path d="M54 64 L68 78" stroke="#1f7de1"/>
+      <path d="M-82 26 V-8" stroke="#9c8330"/>
+      <path d="M82 26 V-8" stroke="#9c8330"/>
+    </g>
+
+    <path d="M-136 -14 A136 136 0 0 1 136 -14" fill="none" stroke="#9c8330" stroke-width="34"/>
+    <path d="M-136 14 A136 136 0 0 0 136 14" fill="none" stroke="#9c8330" stroke-width="34" opacity="0"/>
+
+    <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18">
+      <text transform="rotate(-55)" x="-56" y="-108">The World Constructions Platform</text>
+      <text y="-110" text-anchor="middle" font-size="16">المنصة العالمية لقطاع البناء والتشييد</text>
+    </g>
+  </g>
+
+  <g fill="#000" font-family="Arial, Helvetica, sans-serif" font-weight="700" direction="rtl" unicode-bidi="bidi-override">
+    <text x="1710" y="140" font-size="68" text-anchor="end">المنصة العالمية</text>
+    <text x="1710" y="220" font-size="68" text-anchor="end">لقطاع البناء</text>
+    <text x="1710" y="300" font-size="68" text-anchor="end">والتشييد</text>
+  </g>
+</svg>

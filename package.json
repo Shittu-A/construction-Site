@@ -1,0 +1,29 @@
+{
+  "name": "worldconstructionsplatform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Datamatix-Group/WorldConstructionsPlatform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Datamatix-Group/WorldConstructionsPlatform/issues"
+  },
+  "homepage": "https://github.com/Datamatix-Group/WorldConstructionsPlatform#readme",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "next": "^16.2.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
