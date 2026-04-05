@@ -13,29 +13,29 @@ const CONTINENT_MAP = {
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
-  // Prevent redirect loops checking if it starts with any continent folder
-  const paths = Object.values(CONTINENT_MAP);
-  if (paths.some(p => pathname.startsWith(`/${p}`))) {
+  // Skip if already inside a continent folder
+  const continentPaths = Object.values(CONTINENT_MAP);
+  if (continentPaths.some(p => pathname.startsWith(`/${p}`))) {
     return NextResponse.next();
   }
 
-  // Get continent from Vercel headers, fallback to AS
-  const continentCode = request.headers.get('x-vercel-ip-continent') || 'AS';
-  
-  const targetFolder = CONTINENT_MAP[continentCode] || 'asia';
+  // Only handle root or html-like navigation (not static assets)
+  // Get continent from Vercel geo header
+  const continentCode = request.headers.get('x-vercel-ip-continent');
+  const targetFolder = (continentCode && CONTINENT_MAP[continentCode]) || 'africa';
 
-  return NextResponse.redirect(new URL(`/${targetFolder}${pathname}`, request.url));
+  // Redirect to the continent's index.html explicitly
+  // e.g. / → /africa/index.html
+  const targetPath = `/${targetFolder}/index.html`;
+  return NextResponse.redirect(new URL(targetPath, request.url));
 }
 
 export const config = {
   matcher: [
     /*
-     * Match only navigation requests — skip all static files:
-     * - _next/static (Next.js build assets)
-     * - _next/image (Next.js image optimization)
-     * - favicon.ico
-     * - All static file extensions (css, js, images, fonts, etc.)
+     * Only match the root and non-file paths.
+     * Skip _next internals + all static file extensions.
      */
-    '/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:css|js|jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot|otf|mp4|webm|pdf|json|xml|txt)).*)',
+    '/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:css|js|jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot|otf|mp4|webm|pdf|json|xml|txt|html)).*)',
   ],
 };
