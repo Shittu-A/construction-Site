@@ -26,3 +26,16 @@ export function middleware(request) {
 
   return NextResponse.redirect(new URL(`/${targetFolder}${pathname}`, request.url));
 }
+
+export const config = {
+  matcher: [
+    /*
+     * Match only navigation requests — skip all static files:
+     * - _next/static (Next.js build assets)
+     * - _next/image (Next.js image optimization)
+     * - favicon.ico
+     * - All static file extensions (css, js, images, fonts, etc.)
+     */
+    '/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:css|js|jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot|otf|mp4|webm|pdf|json|xml|txt)).*)',
+  ],
+};
